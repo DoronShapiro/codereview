@@ -30,7 +30,7 @@ angular.module("assignments", [])
                     .success(function(data) {
                         $scope.titleChanged = false;
                         console.log(data);
-                        if (data.status == "success") $.bootstrapGrowl("Assignment Saved!");
+                        if (data.status == "success") $.bootstrapGrowl("Assignment Saved!", { width: "auto", allow_dismiss: false});
                         else $.bootstrapGrowl("Error saving assignment", {
                             type: 'danger'
                         });
