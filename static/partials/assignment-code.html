@@ -65,7 +65,7 @@
                                 <div class='form-group'>
                                     <label for='assessmentComments' class='control-label col-md-4'>Comments</label>
                                     <div class='col-md-8'>
-                                        <textarea rows='3' class='form-control' name='assessmentComments' placeholder='Comments...' ng-model='selectedAssessment.comments'>
+                                        <textarea rows='6' class='form-control' name='assessmentComments' placeholder='Comments...' ng-model='selectedAssessment.comments'>
                                         </textarea>
                                     </div>
                                 </div>
@@ -77,9 +77,9 @@
                             </tab-heading>
                             <div ng-controller='IssuesCtrl'>
                                 <div class='issues'>
-                                    <div class='issue' ng-repeat='issue in selectedAssessment.issues' ng-click='selectIssue($index)'>
-                                        {{ issue.name }} ({{issue.severity}}): {{ issue.description}}
-                                    </div>
+                                    <p class='issue' ng-repeat='issue in selectedAssessment.issues' ng-click='selectIssue($index)'>
+                                        <b>{{ issue.name }}</b> ({{issue.severity}}): {{ issue.description}}
+                                    </p>
                                 </div>
                                 <form class='form-horizontal' role='form'>
                                     <input type='hidden' ng-model='issue.index' />
